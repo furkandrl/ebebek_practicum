@@ -33,12 +33,13 @@ public class Employee {
 
     public double raiseSalary(){
         var hireYear = getHireYear();
+        var salaryWithTaxAndBonus = salaryWithTaxAndBonus();
         if((CURRENT_YEAR-hireYear) <10 ){
-            return salaryWithTaxAndBonus()*0.05;
+            return salaryWithTaxAndBonus*0.05;
         }else if((CURRENT_YEAR-hireYear) > 9 && (CURRENT_YEAR-hireYear) < 20){
-            return salaryWithTaxAndBonus()*0.1;
+            return salaryWithTaxAndBonus*0.1;
         }else if((CURRENT_YEAR-hireYear) > 19){
-            return salaryWithTaxAndBonus()*0.15;
+            return salaryWithTaxAndBonus*0.15;
         }
         return 0;
     }
